@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Assignment one
+Clone this repository and convert all the functional components to class components.
 
 ## Available Scripts
 
