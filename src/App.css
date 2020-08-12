@@ -25,6 +25,17 @@
   border-radius: 50%;
   flex-grow: 0;
   margin: 10px;
+  background: orange;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+.avatarText{
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
 .description{
   flex-grow: 1;
@@ -32,16 +43,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-left: 20px;
 }
 .name{
   color: #5e5a5a;
   font-size: 1em;
-  padding: 10px;
+  /*padding: 6px;*/
+}
+.address{
+  color: #5e5a5a;
+  font-size: 0.7em;
+  margin: 7px 0 4px 0;
 }
 .email{
   color: #a7a1a1;
   font-size: 0.7em;
-  padding: 10px;
+  /*padding: 10px;*/
 }
 .user-list-container{
   display: flex;

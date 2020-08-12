@@ -1,11 +1,15 @@
 import React from "react";
 
 const User = (props) => {
-    const { first_name, last_name, email, avatar} = props;
+    const { name, city, email} = props;
     return <div className="user-container">
-    <img className="avatar-container" src={avatar}/>
+    <div className="avatar-container" >
+       <span className="avatarText">{`${name[0]}${name.split(' ')[1][0]}`}</span>
+    </div>
+
         <div className="description">
-            <span className="name">{`${first_name} ${last_name}`}</span>
+            <span className="name">{name}</span>
+            <span className="address">{city}</span>
             <div className={'email'}>{email}</div>
         </div>
     </div>
