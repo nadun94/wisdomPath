@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
+import {UserContext} from "./UserContext";
 
 const User = (props) => {
-    const { name, city, email, onClickX} = props;
-    return <div className="user-container" onClick={() => onClickX("hello")}>
-    <div className="avatar-container"  >
+    const { data} = props;
+    const { selectedUser, setSelectedUser } = useContext(UserContext).current;
+    const { name, email, city, id } = data;
+    return <div className={`user-container ${ selectedUser === id ? ' selected' : ''}`} onClick={() => setSelectedUser(id)}>
+    <div className="avatar-container "  >
        <span className="avatarText">{`${name[0]}${name.split(' ')[1][0]}`}</span>
     </div>
         <div className="description">

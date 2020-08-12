@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   /*width: 80%;*/
-  /*background: rebeccapurple;*/
+  /*background: rgba(202, 173, 236, 0.53);*/
   margin: 10px;
   padding: 10px;
   border: 1px solid #a7a1a1;
@@ -61,8 +61,27 @@
   /*padding: 10px;*/
 }
 .user-list-container{
+  flex: 3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin: 40px;
+}
+.post-list-container{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40px;
+}
+.post-container{
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+}
+.selected{
+  background-color: rgba(202, 173, 236, 0.53);
 }

@@ -4,7 +4,7 @@ import axios from "axios";
 export const UserContext = React.createContext({
    current:  {
        users: [],
-       selectedUser: '1',
+       selectedUser: 1,
        posts: [],
        setSelectedUser: (val) => {}
    }
@@ -13,7 +13,8 @@ export const UserContext = React.createContext({
 export const UserContextProvider = (props) => {
     const [users, setUsers] = useState([]);
     const [posts, setPosts] = useState([]);
-    const [selectedUser, setSelectedUser] = useState('1');
+    const [selectedUser, setSelectedUser] = useState(1);
+    // const [selectedUserName, setSelectedUserName] = useState('');
 
     const fetchUsers = () => {
         axios.get('https://jsonplaceholder.typicode.com/users')
@@ -25,8 +26,10 @@ export const UserContextProvider = (props) => {
     const fetchPosts = () => {
         axios.get(`https://jsonplaceholder.typicode.com/users/${selectedUser}/posts`)
             .then((result) => {
-                console.log('post list ', JSON.stringify(result))
-                // setPosts(result.data);
+                console.log('post list ', JSON.stringify(result.data))
+                setPosts(result.data);
+                // const u = users.find(value => value.id === selectedUser);
+                // console.log('999dfsidf ', u)
             })
             .catch((e) => {
                 console.log('exception coo', JSON.stringify(e))
