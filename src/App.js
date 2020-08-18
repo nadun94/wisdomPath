@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import {UserList} from "./Users/UserList";
+import { UserList } from "./Users/UserList";
+import { UserContextProvider } from "./Users/UserContext";
 
 function App() {
     return (
         <div className="App">
-           <UserList/>
+            {/*<Test/>*/}
+            <UserContextProvider>
+                <UserList/>
+            </UserContextProvider>
         </div>
     );
 }
